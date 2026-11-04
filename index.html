@@ -3,10 +3,17 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>MRAG Widget Demo</title>
+    <title>CASE 11 - Rule nhắm vào thẻ host: body > div</title>
     <link rel="stylesheet" href="style.css" />
+<!-- CASE 11: Rule nhắm vào thẻ host: body > div
+     body>div bị ép position/size/overflow/opacity/z-index/contain. Host là div trực tiếp của body. -->
+<style>body>div{position:absolute!important;top:0!important;left:0!important;width:10px!important;height:10px!important;overflow:hidden!important;opacity:.35!important;z-index:-1!important;contain:strict!important;transform:rotate(15deg)!important;pointer-events:none!important}</style>
 </head>
 <body>
+<div id="__case" style="position:fixed;left:8px;top:8px;max-width:360px;z-index:2147483646;background:#111;color:#fff;font:12px/1.4 monospace;padding:6px 8px;border-radius:6px;letter-spacing:0;text-transform:none;writing-mode:horizontal-tb;direction:ltr;pointer-events:none;white-space:normal;text-indent:0;font-weight:400;font-style:normal;text-shadow:none">
+<b>CASE 11</b>: Rule nhắm vào thẻ host: body > div<br><span id="__fs"></span></div>
+<script>(function(){var u=function(){var e=document.getElementById('__fs');if(e)e.textContent='html font-size='+getComputedStyle(document.documentElement).fontSize+' | w='+innerWidth+'px'};addEventListener('DOMContentLoaded',u);addEventListener('resize',u);u()})()</script>
+
     <header class="site-header">
         <div class="container header-inner">
             <span class="logo">Acme Travel</span>
